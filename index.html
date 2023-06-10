@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Practice 2 html css js</title>
+        <link rel="stylesheet" href="./style.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+            rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <h1><a class="logo" href="#">Practice 2 html css js</a></h1>
+                <div class="nav_info">
+                    <i class="open_nav ri-align-justify" id="open-nav"></i>
+                    <a href="#"><i class="profile_nav ri-user-line"
+                            id="profile-nav"></i></a>
+                    <ul class="nav_item" id="nav-item">
+                        <i class="close_nav ri-close-circle-line" id="close-nav"></i>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main" id="main">
+            <section class="login" id="login">
+
+                <div class="pic_login"><img src="#" alt="image"></div>
+
+                <div class="login_register" id="login-register">
+
+                    <div class="login_form">
+                        <h1>Login</h1>
+                        <form action>
+                            <div class="login_email">
+                                <input type="email" name="input_email" id>
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <div class="login_password">
+                                <input type="password" name="input_password" id>
+                                <i class="ri-lock-line"></i>
+                            </div>
+                            <div class="login_remember_forget">
+                                <div class="login_remember">
+                                    <input type="checkbox" name="input_remember"
+                                        id="remember">
+                                    <label for="remember">Remember me</label>
+                                </div>
+                                <div class="login_forget">
+                                    <label>Forget Password?</label>
+                                </div>
+                            </div>
+                            <input type="submit" value="Login">
+                            <div class="login_not_account">
+                                <label>Don't have an account? <span>Register</span></label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="register_form">
+                        <h1>Register</h1>
+                        <form action>
+                            <div class="register_username">
+                                <input type="text"><i class="ri-user-line"></i>
+                            </div>
+                            <div class="register_email">
+                                <input type="email" name="input_email" id>
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <div class="register_password">
+                                <input type="password" name="input_password" id>
+                                <i class="ri-lock-line"></i>
+                            </div>
+                            <div class="register_password_confrim">
+                                <input type="password" name="input_password" id>
+                                <i class="ri-lock-line"></i>
+                            </div>
+                            <div class="register_agree">
+                                <input type="checkbox" name="input_agree"
+                                    id="agree_text">
+                                <label for="agree_text">I agree to the terms &
+                                    conditions</label>
+                            </div>
+
+                            <input type="submit" value="Register">
+                            <div class="login_not_account">
+                                <label>Already have an account? <span>Login</span></label>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
