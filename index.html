@@ -31,20 +31,27 @@
         <main class="main" id="main">
             <section class="login" id="login">
 
-                <div class="pic_login"><img src="#" alt="image"></div>
+                <div class="pic_login">
+                    <img src="./image/login_img" alt="image">
+                    <h1>Practice Login</h1>
+                </div>
 
                 <div class="login_register" id="login-register">
 
                     <div class="login_form">
+                        <i class="close_form ri-close-circle-line"
+                            id="close-form"></i>
                         <h1>Login</h1>
-                        <form action>
-                            <div class="login_email">
-                                <input type="email" name="input_email" id>
-                                <i class="ri-mail-line"></i>
+                        <form class="form_login" action>
+                            <div class="input_box">
+                                <span><i class="ri-mail-line"></i></span>
+                                <input type="email" name="input_email">
+                                <label>Email</label>
                             </div>
-                            <div class="login_password">
-                                <input type="password" name="input_password" id>
-                                <i class="ri-lock-line"></i>
+                            <div class="input_box">
+                                <span><i class="ri-lock-line"></i></span>
+                                <input type="password" name="input_password">
+                                <label>Password</label>
                             </div>
                             <div class="login_remember_forget">
                                 <div class="login_remember">
@@ -53,48 +60,19 @@
                                     <label for="remember">Remember me</label>
                                 </div>
                                 <div class="login_forget">
-                                    <label>Forget Password?</label>
+                                    <p>Forget Password?</p>
                                 </div>
                             </div>
-                            <input type="submit" value="Login">
+                            <div class="login_submit">
+                                <input class="login_btn" type="submit"
+                                    value="Login">
+                            </div>
                             <div class="login_not_account">
-                                <label>Don't have an account? <span>Register</span></label>
+                                <h1>Don't have an account? <span
+                                        id="go-register">Register</span></h1>
                             </div>
                         </form>
                     </div>
-
-                    <div class="register_form">
-                        <h1>Register</h1>
-                        <form action>
-                            <div class="register_username">
-                                <input type="text"><i class="ri-user-line"></i>
-                            </div>
-                            <div class="register_email">
-                                <input type="email" name="input_email" id>
-                                <i class="ri-mail-line"></i>
-                            </div>
-                            <div class="register_password">
-                                <input type="password" name="input_password" id>
-                                <i class="ri-lock-line"></i>
-                            </div>
-                            <div class="register_password_confrim">
-                                <input type="password" name="input_password" id>
-                                <i class="ri-lock-line"></i>
-                            </div>
-                            <div class="register_agree">
-                                <input type="checkbox" name="input_agree"
-                                    id="agree_text">
-                                <label for="agree_text">I agree to the terms &
-                                    conditions</label>
-                            </div>
-
-                            <input type="submit" value="Register">
-                            <div class="login_not_account">
-                                <label>Already have an account? <span>Login</span></label>
-                            </div>
-                        </form>
-                    </div>
-
                 </div>
 
             </section>

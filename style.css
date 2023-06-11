@@ -31,7 +31,7 @@ i{
 
 .navbar{
     position: relative;
-    height: 100%;
+    height: 60px;
     width: 100%;
 }
 
@@ -46,7 +46,7 @@ i{
     right: 0;
     top: -1px;
     height: 100vh;
-    width: 40%;
+    width: 20%;
 }
 
 .nav_info i{
@@ -59,6 +59,12 @@ i{
     top: 1rem;
     font-size: 1.5rem;
     z-index: 0;
+    transition: color .3s;
+}
+
+.open_nav:hover {
+    color: #360c0c;
+    cursor: pointer;
 }
 
 .profile_nav{
@@ -143,26 +149,215 @@ i{
 
 
 
+/* ---------------login -------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-main {
-    z-index: 0;
-}
-
-.main_not_active{
+.login {
     display: none;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border: 4px solid rgb(26, 26, 26);
+    border-radius: 30px;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    transition: display .4s;
 }
 
-.login_active{
-    /* display: none; */
+.login_active {
+    display: flex;
+    /* transition: transform .4s ease; */
+    /* transform: scale(1); */
 }
+
+.pic_login{
+    position: relative;
+}
+
+.pic_login img{
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid rgb(26, 26, 26);
+    height: 100%;
+}
+
+.pic_login h1{
+    position: absolute;
+    top: 3rem;
+    left: 4rem;
+    color: white;
+    font-size: 30px;
+    text-shadow: 4px 1px 4px black;
+}
+
+.login_register{
+    height: fit-content;
+    width: 50%;
+    height: 80%;
+    object-position: center;
+    object-fit: cover;
+    margin-top: -70px;
+}
+
+.login_form{
+    position: relative;
+    width: 400px;
+}
+
+.login_form h1{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #685151;
+    text-shadow: 1px 1px 1px black;
+}
+
+.close_form{
+    position: absolute;
+    right: 2rem;
+    top: -1.5rem;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color .3s;
+    color: #360c0c;
+}
+
+.close_form:hover {
+    color: #563838;
+}
+
+.form_login{
+    position: absolute;
+    width: 100%;
+}
+
+/*  */
+
+.input_box {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    border-bottom: 2px solid #9f8989;
+    margin: 30px 0;
+    left: 50px;
+}
+
+.input_box label {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #360c0c;
+    font-weight: 600;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.input_box input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #2b2727;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    /* background: red; */
+}
+
+.input_box i {
+    position: absolute;
+    right: 8px;
+    top: -25px;
+    font-size: 1.2em;
+    color: #360c0c;
+    line-height: 57px;
+    z-index: 999;
+
+}
+
+/*  */
+
+.login_remember_forget{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.login_remember{
+    margin-left: 50px;
+    color: #563838;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.login_remember label:hover,.login_remember input:hover{
+    cursor: pointer;
+}
+
+.login_forget p{
+    margin-right: 50px;
+    color: rgb(194, 18, 18);
+    font-weight: 700;
+    font-size: 15px;
+    transition: color .3s;
+}
+
+.login_forget p:hover{
+    color: #360c0c;
+    cursor: pointer;
+}
+
+.login_submit{
+    text-align: center;
+    margin-top: 0.9rem;
+}
+
+.login_btn{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 24px;
+    background: transparent;
+    color: #360c0c;
+    font-size: 1.0rem;
+    border: 1px solid #360c0c;
+    cursor: pointer;
+    transition: background .5s;
+    font-weight: 700;
+}
+
+.login_btn:hover{
+    background: gray;
+    color: white;
+    border: 1px solid #563838;
+}
+
+.login_not_account{
+    text-align: center;
+    margin-top: 0.3rem;
+}
+
+.login_not_account h1{
+    color: #360c0c;
+    font-size: 16px;
+    text-shadow: 2px 1px 2px rgb(255, 255, 255);
+}
+
+.login_not_account h1 span{
+    color: red;
+    cursor: pointer;
+}
+
+
+
+
+
