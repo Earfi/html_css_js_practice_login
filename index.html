@@ -38,7 +38,7 @@
 
                 <div class="login_register" id="login-register">
 
-                    <div class="login_form">
+                    <div class="login_form" id="login-form">
                         <i class="close_form ri-close-circle-line"
                             id="close-form"></i>
                         <h1>Login</h1>
@@ -49,8 +49,11 @@
                                 <label>Email</label>
                             </div>
                             <div class="input_box">
-                                <span><i class="ri-lock-line"></i></span>
-                                <input type="password" name="input_password">
+                                <span>
+                                    <i class="ri-lock-line hide-icon"></i>
+                                    <i class="ri-lock-unlock-line show-icon"></i>
+                                </span>
+                                <input type="password" class="input_password">
                                 <label>Password</label>
                             </div>
                             <div class="login_remember_forget">
@@ -70,6 +73,46 @@
                             <div class="login_not_account">
                                 <h1>Don't have an account? <span
                                         id="go-register">Register</span></h1>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="register_form" id="register-form">
+                        <h1>Register</h1>
+                        <form class="form_register" action>
+                            <div class="input_box">
+                                <span><i class="ri-user-line"></i></span>
+                                <input type="text" name="input_username">
+                                <label>Username</label>
+                            </div>
+                            <div class="input_box">
+                                <span><i class="ri-mail-line"></i></span>
+                                <input type="email" name="input_email">
+                                <label>Email</label>
+                            </div>
+                            <div class="input_box">
+                                <span>
+                                    <i class="ri-lock-line hide-icon"></i>
+                                    <i class="ri-lock-unlock-line show-icon"></i>
+                                </span>
+                                <input type="password" class="input_password">
+                                <label>Password</label>
+                            </div>
+                            <div class="input_box">
+                                <span>
+                                    <i class="ri-lock-line hide-icon"></i>
+                                    <i class="ri-lock-unlock-line show-icon"></i>
+                                </span>
+                                <input type="password" class="input_password">
+                                <label>Confirm Password</label>
+                            </div>
+                            <div class="register_submit">
+                                <input class="register_btn" type="submit"
+                                    value="Register">
+                            </div>
+                            <div class="register_go_login">
+                                <h1>go to login ? <span
+                                        id="go-login">Login</span></h1>
                             </div>
                         </form>
                     </div>

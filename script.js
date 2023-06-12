@@ -7,6 +7,11 @@ const profile_nav = document.getElementById('profile-nav')
 const main = document.getElementById('main');
 const login = document.getElementById('login');
 
+const go_register = document.getElementById('go-register');
+const go_login = document.getElementById('go-login');
+
+const register_form = document.getElementById('register-form');
+const login_form = document.getElementById('login-form');
 
 
 if(open_nav){
@@ -38,6 +43,61 @@ if(close_form){
     })
 }
 
+if(go_register){
+    go_register.addEventListener('click',()=>{
+        login.classList.add('register')
+        login_form.style.display = 'none';
+        register_form.style.display = 'block';
+    })
+}
 
+if(go_login){
+    go_login.addEventListener('click',()=>{
+        login.classList.remove('register')
+        register_form.style.display = 'none';
+        login_form.style.display = '';
+    })
+}
+var icons_lock = document.querySelectorAll('.ri-lock-line');
+var icons_un_lock = document.querySelectorAll('.ri-lock-unlock-line');
+var inputFields = document.querySelectorAll('.input_password');
 
-// .style.backgroundColor =
+if (icons_lock && icons_un_lock) {
+  for (var i = 0; i < icons_lock.length; i++) {
+    icons_lock[i].addEventListener('click', function(event) {
+      var clickedIconPassword = event.target;
+      var parentDiv = clickedIconPassword.parentNode.parentNode;
+      var inputField = parentDiv.querySelector('.input_password');
+
+      if (inputField.type === 'password') {
+        inputField.type = 'text';
+        icons_lock[i].classList.add('hide-icon');
+        icons_un_lock[i].classList.remove('hide-icon');
+        icons_un_lock[i].classList.add('show-icon');
+      } else {
+        inputField.type = 'password';
+        icons_lock[i].classList.remove('hide-icon');
+        icons_lock[i].classList.add('show-icon');
+        icons_un_lock[i].classList.add('hide-icon');
+      }
+    });
+
+    icons_un_lock[i].addEventListener('click', function(event) {
+      var clickedIconPassword = event.target;
+      var parentDiv = clickedIconPassword.parentNode.parentNode;
+      var inputField = parentDiv.querySelector('.input_password');
+
+      if (inputField.type === 'text') {
+        inputField.type = 'password';
+        icons_lock[i].classList.remove('hide-icon');
+        icons_lock[i].classList.add('show-icon');
+        icons_un_lock[i].classList.add('hide-icon');
+      } else {
+        inputField.type = 'text';
+        icons_lock[i].classList.add('hide-icon');
+        icons_un_lock[i].classList.remove('hide-icon');
+        icons_un_lock[i].classList.add('show-icon');
+      }
+    });
+  }
+}

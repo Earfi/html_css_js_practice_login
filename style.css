@@ -153,14 +153,16 @@ i{
 
 .login {
     display: none;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
+    /* width: 57%; */
     width: fit-content;
     border: 4px solid rgb(26, 26, 26);
     border-radius: 30px;
     position: absolute;
     background: rgb(255, 255, 255);
-    height: 50%;
+    height: 52%;
     left: 50%;
     top: 50%;
     overflow: hidden;
@@ -168,10 +170,14 @@ i{
     transition: display .4s;
 }
 
+.register{
+   background: white;
+    width: fit-content;
+   transition: display .5s;
+}
+
 .login_active {
     display: flex;
-    /* transition: transform .4s ease; */
-    /* transform: scale(1); */
 }
 
 .pic_login{
@@ -203,9 +209,12 @@ i{
     margin-top: -70px;
 }
 
+/* ----------------------- login_form ----------------------------------- */
+
 .login_form{
+    /* display: none; */
     position: relative;
-    width: 400px;
+    width: 500px;
 }
 
 .login_form h1{
@@ -215,11 +224,12 @@ i{
     margin-bottom: 10px;
     color: #685151;
     text-shadow: 1px 1px 1px black;
+    margin-left: -10px;
 }
 
 .close_form{
     position: absolute;
-    right: 2rem;
+    right: 3.5rem;
     top: -1.5rem;
     font-size: 30px;
     cursor: pointer;
@@ -245,6 +255,7 @@ i{
     border-bottom: 2px solid #9f8989;
     margin: 30px 0;
     left: 50px;
+    margin-left: 30px;
 }
 
 .input_box label {
@@ -291,6 +302,8 @@ i{
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+    margin-left: 30px;
+    margin-right: 60px;
 }
 
 .login_remember{
@@ -320,6 +333,7 @@ i{
 .login_submit{
     text-align: center;
     margin-top: 0.9rem;
+    margin-left: -30px;
 }
 
 .login_btn{
@@ -357,7 +371,88 @@ i{
     cursor: pointer;
 }
 
+/* ----------------------- register_form ----------------------------------- */
+
+.register_form {
+    width: 500px;
+    display: none;
+    position: relative;
+    margin-left: 15px;
+}
+
+.register_form h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #685151;
+    text-shadow: 1px 1px 1px black;
+    margin-left: -20px;
+}
+
+.register_submit {
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 0.9rem;
+}
+
+.register_btn {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 24px;
+    background: transparent;
+    color: #360c0c;
+    font-size: 1.0rem;
+    border: 1px solid #360c0c;
+    cursor: pointer;
+    transition: background .5s;
+    font-weight: 700;
+    margin-left: -60px;
+}
+
+.register_btn:hover {
+    background: gray;
+    color: white;
+    border: 1px solid #563838;
+}
+
+.register_go_login {
+    text-align: center;
+    margin-top: -0.5rem;
+    margin-left: 25px;
+}
+
+.register_go_login h1 {
+    color: #360c0c;
+    font-size: 16px;
+    text-shadow: 2px 1px 2px rgb(255, 255, 255);
+}
+
+.register_go_login h1 span {
+    color: red;
+    cursor: pointer;
+}
+
+.pw_open{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+#checkPassword{
+    margin-top: 32px;
+    margin-left: -140px;
+}
+
+.hide-icon {
+  display: inline-block;
+}
+
+.show-icon {
+  display: none;
+}
 
 
-
-
+.hide-icon,.show-icon:hover{
+    color: red;
+    cursor: pointer;
+}
